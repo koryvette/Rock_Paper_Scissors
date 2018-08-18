@@ -1,2 +1,2 @@
-# code-lou
+# RPS game
 web project
