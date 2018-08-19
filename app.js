@@ -15,9 +15,10 @@ function getComputerChoice(){
 	const choices = ['r','p','s'];
 	const randomNumber = Math.floor(Math.random() * 3);
 	return choices[randomNumber];
+
 }
 
-function convertWord(letter){
+function convertWord(letter) {
 	if (letter === "r") return "Rock";
 	if (letter === "p") return "Paper";
 	return "Scissors";
@@ -53,22 +54,20 @@ function game(userChoice) {
 		case "rs":
 		case "pr":
 		case "sp":
-				win()
+				win(userChoice, computerChoice)
 				break;
 			case "rp":
 			case "ps":
 			case "sr":
-				lose()
+				lose(userChoice, computerChoice)
 				break;
 			case "rr":
 			case "pp":
 			case "ss":
-				draw()
+				draw(userChoice, computerChoice)
 				break;
-		default:
 
 	}
-	console.log(userChoice);
 }
 
 function main() {
